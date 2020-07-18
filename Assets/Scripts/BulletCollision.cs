@@ -13,7 +13,9 @@ public class BulletCollision : MonoBehaviour
         if (collision.collider.gameObject.CompareTag("Enemy"))
         {
             //Inc Score
+            FindObjectOfType<GameManager>().KillEnemy();
             Destroy(collision.collider.gameObject, 0f);
+            Destroy(this.gameObject, 0f);
         }
     }
 }

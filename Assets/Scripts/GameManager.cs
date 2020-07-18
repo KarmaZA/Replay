@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -9,13 +10,14 @@ public class GameManager : MonoBehaviour
 {
 
     public static float enemyNum = 2f;
-    public static float enemiesKilled = 0f;
+    public float enemies_killed = 4f;
+    public static float Total_enemiesKilled = 0f;
     public Text text;
     // Start is called before the first frame update
     void Start()
     {
         //LevelNumTrack.Level * 2;
-        text.text = "Score : " + enemiesKilled;
+        text.text = "Score : " + Total_enemiesKilled;
     }
 
     // Update is called once per frame
@@ -46,18 +48,31 @@ public class GameManager : MonoBehaviour
     public void KillEnemy()
     {
         //Debug.Log(enemiesKilled);
-        enemiesKilled += 1;
-        text.text = "Score : " + enemiesKilled;
+        Total_enemiesKilled += 1;
+        enemies_killed += 1;
+        text.text = "Score : " + Total_enemiesKilled;
         
     }
 
     public void GameOver()
     {
         Debug.Log("GameOver");
-        enemiesKilled = 0f;
         enemyNum = 2f;
         EnemyMove.moveSpeed = 4f;
         Debug.Log(enemyNum);
         SceneManager.LoadScene(3);
+    }
+
+    public int GetBullets()
+    {
+        int x = (int)enemies_killed;
+        enemies_killed = 0;
+        return x;
+    }
+
+    public void Replay()
+    {
+        //Majkor mechanic
+        Debug.Log("End game");
     }
 }

@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene1Garden.unity
     guid: bdfca8c891201494cb3cf0492c2f80d0
   - enabled: 1
-    path: Assets/Scenes/Scene2HauntedWood.unity
-    guid: c507cf06b6c61eb4cbcd865183cfb3cd
-  - enabled: 1
     path: Assets/Scenes/Scene3GameOver.unity
     guid: db2f0c6760d268340be34b7e11ee8060
   m_configObjects: {}

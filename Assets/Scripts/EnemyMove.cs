@@ -25,7 +25,7 @@ public class EnemyMove : MonoBehaviour
         LookDir.x = player.position.x - rb.position.x;// -0.5f;
         LookDir.y = player.position.y - rb.position.y;// -0.5f;
 
-        float angle = Mathf.Atan2(LookDir.y, LookDir.x) * Mathf.Rad2Deg + 180f;
+        float angle = Mathf.Atan2(LookDir.y, LookDir.x) * Mathf.Rad2Deg + 270f;
         rb.rotation = angle;
     }
     private void FixedUpdate()
