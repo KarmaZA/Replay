@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //if ((enemiesKilled > enemyNum))// || (enemiesKilled == 2 && (FindObjectOfType<Enemy>() != null)))
-        GameObject[] checkEnemy = GameObject.FindGameObjectsWithTag("Enemy");
+        /*GameObject[] checkEnemy = GameObject.FindGameObjectsWithTag("Enemy");
         
         if (checkEnemy.Length == 0)
         {
@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
             //enemiesKilled = 0;
             
             SceneManager.LoadScene(sceneNum);
-        }
+        }*/
     }
 
     public void KillEnemy()
