@@ -19,7 +19,7 @@ public class Shooting : MonoBehaviour
 
     void Update()
     {
-        bullet_Count = FindObjectOfType<GameManager>().GetBullets();
+        //bullet_Count = FindObjectOfType<GameManager>().GetBullets();
         if (Input.GetButtonDown("Fire1"))
         {
             if (bullet_Count > 0)
@@ -35,5 +35,6 @@ public class Shooting : MonoBehaviour
         GameObject bullet = Instantiate(BulletPre, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.right * bulletSpeed, ForceMode2D.Impulse);
+        bullet_Count -= 1;
     }
 }
