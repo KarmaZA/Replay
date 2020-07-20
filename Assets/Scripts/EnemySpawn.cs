@@ -2,46 +2,26 @@
 using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
+using Vector2 = UnityEngine.Vector2;
 
 public class EnemySpawn : MonoBehaviour
 {
     public GameObject enemy;
-    public float xOffset = 5f;
-    public Camera cam;
-    public static float EnemyNum =0f;
-
-    public bool SpawnEnabled = true;
+    [SerializeField]
+    private Vector2[] SpawnPoints;
+    public float Spawn_Delay = 5f;
     // Start is called before the first frame update
     void Start()
     {
-        EnemyNum = GameManager.enemyNum;
-
-        //Debug.Log(EnemyNum + "here"); 
-        Invoke("Spawn", 0f);
+        StartCoroutine(Spawn());
     }
 
-    void Spawn()
+    IEnumerator Spawn()
     {
-        if (SpawnEnabled)
+        yield return new WaitForSeconds(Spawn_Delay);
+        for (int x = 0; x < 5; x++)
         {
-            for (int x = 0; x < EnemyNum;x++)// (2 * LevelNumTrack.Level); x++)
-                {
-                float num = Random.Range(-25f, 25f);
-                UnityEngine.Vector2 moSp = SpawnPoint(num);
-                GameObject enem = Instantiate(enemy, moSp, UnityEngine.Quaternion.identity);
-                enem.SetActive(true);
-                //Destroy(enem, 4f);
-            }
-           // LevelNumTrack.Level = LevelNumTrack.Level + 1;
+            Instantiate(enemy, SpawnPoints[x], UnityEngine.Quaternion.identity);
         }
     }
-
-    UnityEngine.Vector2 SpawnPoint(float x){
-        UnityEngine.Vector2 toRe;
-        toRe.x = x;
-        toRe.y = Mathf.Pow(x, 2f) * -0.03f + 15f;
-        //Debug.Log(toRe);
-        return toRe;
-    }
-    
 }
