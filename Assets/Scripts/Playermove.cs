@@ -28,4 +28,6 @@ public class Playermove : MonoBehaviour
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
         rb.SetRotation(angle);
     }
+
+    public Rigidbody2D GetRB() { return rb; }
 }

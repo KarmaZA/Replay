@@ -193,13 +193,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8009899986922797583, guid: 78d1139f11b65564bbb71dd5465ce55f,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 4
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8009899986922797578, guid: 78d1139f11b65564bbb71dd5465ce55f, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78d1139f11b65564bbb71dd5465ce55f, type: 3}
 --- !u!1 &190429881
 GameObject:
@@ -27702,14 +27696,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 8009899986922797581, guid: 78d1139f11b65564bbb71dd5465ce55f, type: 3}
-  xOffset: 5
-  cam: {fileID: 519420031}
   SpawnPoints:
   - {x: 27.5, y: -16.5}
   - {x: 27.5, y: 19.5}
   - {x: -25.5, y: 19.5}
   - {x: -25.5, y: -16.5}
-  SpawnEnabled: 1
+  Spawn_Delay: 5
 --- !u!1 &1746363373
 GameObject:
   m_ObjectHideFlags: 0

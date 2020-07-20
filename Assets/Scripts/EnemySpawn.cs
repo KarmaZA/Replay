@@ -19,7 +19,7 @@ public class EnemySpawn : MonoBehaviour
     IEnumerator Spawn()
     {
         yield return new WaitForSeconds(Spawn_Delay);
-        for (int x = 0; x < 5; x++)
+        for (int x = 0; x < 4; x++)
         {
             Instantiate(enemy, SpawnPoints[x], UnityEngine.Quaternion.identity);
         }
