@@ -27,14 +27,6 @@ public class GameManager : MonoBehaviour
         text.text = "Score : " + Total_enemiesKilled;
         
     }
-    public void GameOver()
-    {
-        Debug.Log("GameOver");
-        enemyNum = 2f;
-        EnemyMove.moveSpeed = 4f;
-        Debug.Log(enemyNum);
-        SceneManager.LoadScene(3);
-    }
     public int GetBullets()
     {
         int x = (int)enemies_killed;
