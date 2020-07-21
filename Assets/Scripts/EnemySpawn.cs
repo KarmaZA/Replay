@@ -32,5 +32,6 @@ public class EnemySpawn : MonoBehaviour
         {
             Instantiate(enemy, SpawnPoints[x], UnityEngine.Quaternion.identity);
         }
+        StartCoroutine(Spawn());
     }
 }

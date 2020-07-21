@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
         int x = (int)enemies_killed;
         if(x == 0) { x = 1; }
         enemies_killed = 0;
-        return x;
+        return 50;// x ;
     }
     public void Replay()
     {

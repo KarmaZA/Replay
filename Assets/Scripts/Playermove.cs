@@ -5,7 +5,7 @@ public class Playermove : MonoBehaviour
 {
 
     public Rigidbody2D rb;
-    public float MoveSpeed = 5f;
+    public float MoveSpeed = 15f;
     public Camera cam;
     //public Animator animator;
     bool Spawning = false;

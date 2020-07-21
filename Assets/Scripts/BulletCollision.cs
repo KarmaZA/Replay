@@ -10,7 +10,7 @@ public class BulletCollision : MonoBehaviour
         {
             Debug.Log("Player Hit");
         }
-        if (collision.collider.gameObject.CompareTag("Enemy"))
+        if (collision.collider.gameObject.CompareTag("Enemy") || collision.collider.gameObject.CompareTag("Terrain"))
         {
             //Inc Score
             FindObjectOfType<GameManager>().KillEnemy();
