@@ -8,6 +8,7 @@ public class Playermove : MonoBehaviour
     public float MoveSpeed = 5f;
     public Camera cam;
     //public Animator animator;
+    bool Spawning = false;
 
     Vector2 movement;
     Vector2 mousePos;
@@ -17,6 +18,15 @@ public class Playermove : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        if (!Spawning && rb.position.x > -25)
+        {
+            FindObjectOfType<EnemySpawn>().startSpawning();
+            Spawning = true;
+        }
+        if(Spawning && rb.position.x < -25)
+        {
+            FindObjectOfType<GameManager>().Replay();
+        }
     }
 
     void FixedUpdate()
@@ -30,4 +40,5 @@ public class Playermove : MonoBehaviour
     }
 
     public Rigidbody2D GetRB() { return rb; }
+
 }

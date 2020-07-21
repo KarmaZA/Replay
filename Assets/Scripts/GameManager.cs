@@ -45,10 +45,10 @@ public class GameManager : MonoBehaviour
     public void Replay()
     {
         //Majkor mechanic
-        Debug.Log("End game");
+        Debug.Log("Repaly");
     }
     public void endGame()
     {
-
+        SceneManager.LoadScene(2);
     }
 }

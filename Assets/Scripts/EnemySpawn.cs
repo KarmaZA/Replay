@@ -10,12 +10,21 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField]
     private Vector2[] SpawnPoints;
     public float Spawn_Delay = 5f;
+    bool spawn = false;
     // Start is called before the first frame update
-    void Start()
+    public void startSpawning()
     {
-        StartCoroutine(Spawn());
+        if (!spawn)
+        {
+            StartCoroutine(Spawn());
+            spawn = true;
+        }
     }
-
+    public void StopSpawning()
+    {
+        StopCoroutine(Spawn());
+        spawn = false;
+    }
     IEnumerator Spawn()
     {
         yield return new WaitForSeconds(Spawn_Delay);
