@@ -45,13 +45,8 @@ public class EnemyMove : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        //rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-
-
         LookDir.Normalize();
         MoveChar(LookDir);
-        //Debug.Log(player.position);
-
     }
 
     void MoveChar(Vector2 direction)
