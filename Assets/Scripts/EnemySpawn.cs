@@ -1,17 +1,21 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using System.Numerics;
 using UnityEngine;
+using Quaternion = UnityEngine.Quaternion;
 using Vector2 = UnityEngine.Vector2;
 
 public class EnemySpawn : MonoBehaviour
 {
     public GameObject enemy;
+    public GameObject Pickup;
     [SerializeField]
     private Vector2[] SpawnPoints;
-    public float Spawn_Delay = 5f;
+    public static float Spawn_Delay = 5f;
     bool spawn = false;
-    // Start is called before the first frame update
+    private void Start()
+    {
+        Spawn_Delay -= 0.1f;
+        if(Spawn_Delay < 3) { Spawn_Delay = 3.4f; }
+    }
     public void startSpawning()
     {
         if (!spawn)
@@ -30,8 +34,9 @@ public class EnemySpawn : MonoBehaviour
         yield return new WaitForSeconds(Spawn_Delay);
         for (int x = 0; x < 4; x++)
         {
-            Instantiate(enemy, SpawnPoints[x], UnityEngine.Quaternion.identity);
+            Instantiate(enemy, SpawnPoints[x], Quaternion.identity);
         }
+        Instantiate(Pickup, new Vector2(Random.Range(-25.5f, 27.5f), Random.Range(-16.5f, 19.5f)), Quaternion.identity);
         StartCoroutine(Spawn());
     }
 }

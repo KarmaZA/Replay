@@ -49207,7 +49207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1275291753}
-  MoveSpeed: 4.2
+  MoveSpeed: 6
   cam: {fileID: 519420031}
 --- !u!212 &1275291755
 SpriteRenderer:
@@ -49341,7 +49341,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ebb86362ac2ae3439c6a4667c6b2cce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies_killed: 0
   text: {fileID: 1746363375}
 --- !u!4 &1637387027
 Transform:
@@ -49370,6 +49369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 8009899986922797581, guid: 78d1139f11b65564bbb71dd5465ce55f, type: 3}
+  Pickup: {fileID: 9089980900900877802, guid: 42a50194dea3b624f8126de352e0179f, type: 3}
   SpawnPoints:
   - {x: 27.5, y: -16.5}
   - {x: 27.5, y: 19.5}

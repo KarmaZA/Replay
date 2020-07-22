@@ -37,4 +37,6 @@ public class Shooting : MonoBehaviour
         rb.AddForce(firePoint.right * bulletSpeed, ForceMode2D.Impulse);
         bullet_Count -= 1;
     }
+
+    public void GetPickUp() { bullet_Count += 1; }
 }
