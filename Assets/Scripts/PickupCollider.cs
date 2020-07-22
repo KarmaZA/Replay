@@ -23,6 +23,7 @@ public class PickupCollider : MonoBehaviour
         if (collision.collider.gameObject.CompareTag("Player"))
         {
             FindObjectOfType<Shooting>().GetPickUp();
+            FindObjectOfType<GameManager>().KillEnemy();
             Destroy(this.gameObject, 0f);
         }
     }
