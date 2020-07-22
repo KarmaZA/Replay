@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public static float enemies_killed = 0f;
     public static float Total_enemiesKilled = 0f;
     public Text text;
+    public static int Replay_Count = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,17 +26,23 @@ public class GameManager : MonoBehaviour
     }
     public int GetBullets()
     {
-        int x = (int) enemies_killed;
-        if(x == 0) { x = 2; }
+        int x = (int)(Total_enemiesKilled + 1) / Replay_Count;
+        x += (int) enemies_killed;
         enemies_killed = 0;
         return x;
     }
     public void Replay()
     {
+        Replay_Count += 1;
         SceneManager.LoadScene(1);
     }
     public void EndGame()
     {
         SceneManager.LoadScene(2);
+    }
+    public void Reset()
+    {
+        enemies_killed = 0f;
+        Total_enemiesKilled = 0f;
     }
 }

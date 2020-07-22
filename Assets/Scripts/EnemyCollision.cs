@@ -9,7 +9,7 @@ public class EnemyCollision : MonoBehaviour
         if (collision.collider.CompareTag("Player"))
         {
             //Player lose 
-            FindObjectOfType<GameManager>().Replay();
+            FindObjectOfType<GameManager>().EndGame();
         }
     }
 }

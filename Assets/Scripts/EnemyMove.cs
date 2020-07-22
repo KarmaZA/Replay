@@ -8,7 +8,7 @@ public class EnemyMove : MonoBehaviour
     private Rigidbody2D player;
     public Vector2 LookDir;
     public Rigidbody2D rb;
-    public static float moveSpeed = 5f;
+    public static float moveSpeed = 4f;
     //public bool
     bool Delay = false;
 

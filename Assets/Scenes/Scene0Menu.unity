@@ -155,7 +155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -187}
+  m_AnchoredPosition: {x: 0, y: -159}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &356034275
@@ -190,8 +190,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "WASD to move\nLeft click to shoot\nAim with the mouse \nIf you get hit
-    by the enmy you lose."
+  m_Text: "WASD to move. Left click to shoot. Aim with the mouse \nIf you get hit
+    by the enemy you lose.\nReturn to Spawn to Replay the level.\nThe bullets you
+    get are equal to the enemies you kill.\nThe PickUps also give you bullets.\nEach
+    replay kill more enemies so you get more bullets."
 --- !u!222 &356034276
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -342,7 +344,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 55}
   m_SizeDelta: {x: 309.85568, y: 145.69734}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!122 &727899827
@@ -836,7 +838,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 117}
+  m_AnchoredPosition: {x: 0, y: 201}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1919196266
@@ -860,18 +862,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 836a8fd1f0fb22f43abb45b884e60ead, type: 3}
-    m_FontSize: 80
+    m_FontSize: 108
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
-    m_MaxSize: 100
+    m_MaxSize: 108
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Insurgent
+  m_Text: RePlay
 --- !u!222 &1919196267
 CanvasRenderer:
   m_ObjectHideFlags: 0

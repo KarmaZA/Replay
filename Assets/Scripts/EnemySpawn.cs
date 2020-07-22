@@ -14,7 +14,7 @@ public class EnemySpawn : MonoBehaviour
     private void Start()
     {
         Spawn_Delay -= 0.1f;
-        if(Spawn_Delay < 3) { Spawn_Delay = 3.4f; }
+        if(Spawn_Delay < 2) { Spawn_Delay = 2.4f; }
     }
     public void startSpawning()
     {
@@ -30,13 +30,13 @@ public class EnemySpawn : MonoBehaviour
         spawn = false;
     }
     IEnumerator Spawn()
-    {
-        yield return new WaitForSeconds(Spawn_Delay);
+    {       
         for (int x = 0; x < 4; x++)
         {
             Instantiate(enemy, SpawnPoints[x], Quaternion.identity);
         }
         Instantiate(Pickup, new Vector2(Random.Range(-25.5f, 27.5f), Random.Range(-16.5f, 19.5f)), Quaternion.identity);
+        yield return new WaitForSeconds(Spawn_Delay);
         StartCoroutine(Spawn());
     }
 }
