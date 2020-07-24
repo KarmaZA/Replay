@@ -192,7 +192,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "WASD to move. Left click to shoot. Aim with the mouse \nIf you get hit
     by the enemy you lose.\nReturn to Spawn to Replay the level.\nThe bullets you
-    get are equal to the enemies you kill.\nThe PickUps also give you bullets.\nEach
+    get are based on the score you get.\nThe PickUps also give you bullets.\nEach
     replay kill more enemies so you get more bullets."
 --- !u!222 &356034276
 CanvasRenderer:

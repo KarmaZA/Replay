@@ -25,7 +25,6 @@ public class Playermove : MonoBehaviour
         }
         if(Spawning && rb.position.x < -25)
         {
-            Debug.Log("agaain");
             Spawning = false;
             FindObjectOfType<GameManager>().Replay();
         }
