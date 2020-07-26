@@ -10,7 +10,7 @@ public class BulletCollision : MonoBehaviour
         {
             //Inc Score
 
-            collision.collider.gameObject.GetComponent<HPBar>().DecHP();
+            collision.collider.gameObject.GetComponent<HPBar>().DecHP(0);
             Destroy(this.gameObject, 0f);
         }
         if (collision.collider.gameObject.CompareTag("Terrain"))
