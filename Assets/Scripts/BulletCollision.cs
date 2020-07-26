@@ -9,8 +9,8 @@ public class BulletCollision : MonoBehaviour
         if (collision.collider.gameObject.CompareTag("Enemy"))
         {
             //Inc Score
-            FindObjectOfType<GameManager>().KillEnemy();
-            Destroy(collision.collider.gameObject, 0f);
+
+            collision.collider.gameObject.GetComponent<HPBar>().DecHP();
             Destroy(this.gameObject, 0f);
         }
         if (collision.collider.gameObject.CompareTag("Terrain"))
