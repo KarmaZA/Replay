@@ -16,7 +16,7 @@ public class HPBar : MonoBehaviour
     }
     public void DecHP(float dmg)
     {
-        HP -= (dmg != 0) ?  dmg : 30;
+        HP -= (dmg != 0) ?  dmg : 100;
         if (HP < 0)
         {
             HP = 0;
