@@ -16,19 +16,19 @@ public class HPBar : MonoBehaviour
     }
     public void DecHP(float dmg)
     {
-        HP -= (dmg != 0) ?  dmg : 100;
-        if (HP < 0)
-        {
-            HP = 0;
-            FindObjectOfType<GameManager>().KillEnemy();
-            FindObjectOfType<EnemyMove>().ShotDead();
-
-        }
+        HP -= (dmg != 0) ?  dmg : 100;        
     }
     // Update is called once per frame
     void Update()
     {
         displayHP = HP / 100f;
         bar.localScale = new Vector3(displayHP, 1f, 0);
+        if (HP < 1)
+        {
+            HP = 0;
+            FindObjectOfType<GameManager>().KillEnemy();
+            FindObjectOfType<EnemyMove>().ShotDead();
+
+        }
     }
 }

@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
         int x = (int)(Total_enemiesKilled + 1) / Replay_Count;
         x += (int) enemies_killed;
         enemies_killed = 0;
+        if (x == 0) { x = 1; }
         return x;
     }
     public void Replay()

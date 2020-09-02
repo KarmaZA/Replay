@@ -57,6 +57,6 @@ public class EnemyMove : MonoBehaviour
     
     public void ShotDead()
     {
-        Destroy(this, 0f);
+        Destroy(this.gameObject, 0f);
     }
 }
