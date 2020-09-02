@@ -11,11 +11,13 @@ public class GameManager : MonoBehaviour
     public static float enemies_killed = 0f;
     public static float Total_enemiesKilled = 0f;
     public Text text;
+    public Text Round;
     public static int Replay_Count = 1;
     // Start is called before the first frame update
     void Start()
     {
         text.text = "Score : " + Total_enemiesKilled;
+        Round.text = "Round: " + Replay_Count;
     }
     public void KillEnemy()
     {
